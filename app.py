@@ -1,4 +1,4 @@
-from fastapi import FastAPI,Path,body
+from fastapi import FastAPI,Path,Body
 import uvicorn
 from pydantic import BaseModel, Field
 
