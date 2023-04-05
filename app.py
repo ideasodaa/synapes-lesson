@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-from fastapi import FastAPI, Path, Body
-=======
 from fastapi import FastAPI,Path,body
->>>>>>> 22db0a2 (change app.py)
 import uvicorn
 from pydantic import BaseModel, Field
 
 app = FastAPI(title="Sample FastAPI",
               description="For education", version="1.0")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 data = {1: "John", 2: "jane"}
 
 @app.get("/api/people")
@@ -21,8 +16,6 @@ def get_peoples():
 def get_one_people(id: int = Path()):
     return data[id]
 
-from pydantic import BaseModel, Field
-
 class People(BaseModel):
     id: int = Field(..., description="first name")
     name: str = Field("None", description="last name")
@@ -31,13 +24,6 @@ class People(BaseModel):
 def add_one_people(data: People):
     print(data)
     return data
-=======
-@app.get("/")
-def read_root():
-    return {"Hello": "Khun"}
->>>>>>> 8e7f2ff ( change world to Khun)
-=======
->>>>>>> 22db0a2 (change app.py)
 
 data={1:"Yuta",2:"Gigi"}
 
