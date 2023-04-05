@@ -6,6 +6,7 @@ app = FastAPI(title="Sample FastAPI",
               description="For education", version="1.0")
 
 
+<<<<<<< HEAD
 data = {1: "John", 2: "jane"}
 
 @app.get("/api/people")
@@ -25,6 +26,8 @@ def add_one_people(data: People):
     print(data)
     return data
 
+=======
+>>>>>>> 93c4b5f5e1d2f98f797072f792bd78e982d6661f
 data={1:"Yuta",2:"Gigi"}
 
 class people(BaseModel):
