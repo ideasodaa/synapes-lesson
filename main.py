@@ -23,7 +23,7 @@ class Input(BaseModel):
 @app.post("/prediction")
 def prediction(data: Input):
     data = dict(data).items()
-    r=model.prediction(data)
+    r=int(model.prediction(data))
     result = {"status": "OK", "result": r}
     return result
 
