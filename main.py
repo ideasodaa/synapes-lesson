@@ -22,9 +22,18 @@ class Input(BaseModel):
     
 @app.post("/prediction")
 def prediction(data: Input):
-    data = dict(data).items()
-    r=int(model.prediction(data))
-    result = {"status": "OK", "result": r}
+
+    #convert dict to array
+    data = dict(data)
+    data_=np.array(list(data.values()))
+    print("data_",data_)
+
+    #predict model
+    r=model.predict(data_.reshape(1,-1))
+    print("result", r)
+
+    #show result
+    result = {"status": "OK", "result": int(r)}
     return result
 
 
